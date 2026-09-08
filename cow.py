@@ -74,7 +74,7 @@ def energy():
     and total energy
     """
     pass
-
+DIDIDIDIDIDIDIDIDIDIDI
 
 # Running Code
 F0 = force(r0, v0, c=1)                                 # Force vector

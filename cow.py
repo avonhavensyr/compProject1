@@ -74,7 +74,24 @@ def energy():
     and total energy
     """
     pass
-DIDIDIDIDIDIDIDIDIDIDI
+
+
+def ME(t0):
+    i = np.argmin(np.abs(t - t0))
+
+    x = r[i, 0]
+    y = r[i, 1]
+    vx = v[i, 0]
+    vy = v[i, 1]
+
+    Px = m * vx
+    Py = m * vy
+    T = 0.5 * m * (vx**2 + vy**2)
+    V = -m * ag[0, 1] * y
+    E = T + V
+
+    return Px, Py, T, V, E
+
 
 # Running Code
 F0 = force(r0, v0, c=1)                                 # Force vector

@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 m = 5                           # mass of cow [kg]
-#ag = np.array([[0, -9.8]])      # acceleration due to gravity [m/s^2]
+ag = np.array([[0, -9.8]])      # acceleration due to gravity [m/s^2]
 
 t0 = np.array([0])              # start at time 0 [s]
 dt = 0.1                        # fixed time interval [s]
@@ -79,7 +79,7 @@ def energy(t0):
     Px = m * vx
     Py = m * vy
     T = 0.5 * m * (vx**2 + vy**2)
-    V = -m * ag[0, 1] * y
+    V = -m * ag[0,1] * y
     E = T + V
 
     return Px, Py, T, V, E

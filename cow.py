@@ -22,18 +22,26 @@ v0 = np.array([[v0x, v0y]])     # initial velocity vector
 # FUNCTIONS DESCRIBED IN THE ASSIGNMENT INSTRUCTIONS
 
 # 3a: Force as a function of position & velocity– assume only gravity & wind resistance
+# 9/9/26  changed force below - Gabe
 def force(r, v, c):
-    """
+    Fx, Fy = input("Input force symbolically in terms of (x,y,vx,vy). First Fx, then Fy,
+    split by spaces").split()
+    x=r0x ; y=r0y
+    
+
+
+    F=np.array[Fx,Fy]
+
+    ""
     Calculate the total force vector
     r (2D array): Position Vector
     v (2D array): Velocity Vector
-    """
     # NOT CURRENTLY WORKING AS NEEDED
-    wr = c * (v**2)         # Wind resistance        
+    wr = c * (v**2)         # Wid resistance
     a = ag                  # Acceleration due to gravity
     F = m * a              # NOT FINAL VERSION. ONLY INCLUDES GRAVITY.
     return F
-
+    ""
 # 3b: New position and velocity from the current position and velocity
 def newState(r, v, F, t, dt, c=1):
     """

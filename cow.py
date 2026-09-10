@@ -64,12 +64,25 @@ def newState(r, v, F, t, dt, c):
         return newState(r_tot, v_tot, F_tot, t, dt, c)
 
 # Function to give total potential and total kinetic energy at a given instance
-def energy():
+def energy(t0):
     """
     Function that calculates the potential, kinetic,
     and total energy
     """
-    pass
+    i = np.argmin(np.abs(t - t0))
+
+    x = r[i, 0]
+    y = r[i, 1]
+    vx = v[i, 0]
+    vy = v[i, 1]
+
+    Px = m * vx
+    Py = m * vy
+    T = 0.5 * m * (vx**2 + vy**2)
+    V = -m * ag[0, 1] * y
+    E = T + V
+
+    return Px, Py, T, V, E
 
 
 # Running Code
